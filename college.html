@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outer Beauty</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 100vh;
+    }
+    .left {
+      flex: 8;
+      background-image: url('img/photo1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .right {
+      flex: 2;
+      background-color: #ffffff;
+      padding: 2rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    .poem-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .poem {
+      white-space: pre-wrap;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left, .right {
+        width: 100%;
+        height: auto;
+      }
+      .left {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <div class="poem-title">Gravity Dressed in Beauty</div>
+      <div class="poem">
+there’s something sacred in your face.
+like light caught in still water,
+like the first time you see a painting that feels like it’s staring back.
+
+the way your eyes hold warmth
+it’s not just the color,
+it’s the way they look at the world,
+like everything’s worth loving.
+
+your lips soft like velvet,
+shaped like poetry before it’s written.
+i swear, when you speak, the air listens.
+
+your skin glows like dusk
+not just golden,
+but tender, alive.
+like sunlight lives under it.
+
+your hands… delicate but strong
+like they were made to hold softness,
+to create, to comfort.
+even the way you move feels like music.
+grace without trying,
+art without effort.
+
+i don’t just notice you
+i’m pulled to you.
+like gravity dressed in beauty.
+like something my soul remembered before my body did.
+
+you don’t even try.
+and that’s what wrecks me.
+      </div>
+    </div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="https://ik.imagekit.io/1crvfctei/Frank%20Ocean%20-%20Godspeed.mp3?updatedAt=1742400390335" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    const audio = document.getElementById('bg-music');
+    audio.addEventListener('loadedmetadata', () => {
+      audio.currentTime = 33; // Mulai dari detik ke-33, bukan 175 ya?
+    });
+  </script>
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Global box model */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff;
+}
+
+/* Login page styles */
+.login_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 2px solid #000;
+}
+
+button[type="submit"] {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.login_description {
+  font-size: 14px;
+  color: #ccc;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Birthday page styles */
+.song {
+  visibility: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
+  padding: 40px 20px;
+  visibility: visible;
+  position: relative;
+}
+
+.container > div {
+  left: 0;
+  right: 0;
+  top: 20vh;
+  position: relative;
+}
+
+.one {
+  font-size: 4.5rem;
+}
+
+.two {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.three {
+  font-size: 3rem;
+}
+
+.four .text-box {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 600px;
+  background-color: #f9f9f9;
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.hbd-line {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.real-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1aa7ec;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.real-btn:hover {
+  background-color: #0d8acc;
+}
+
+/* Replay Section */
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 500px) {
+  .login_form {
+    width: 350px;
+    height: 250px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .four .text-box {
+    width: 90%;
+  }
+
+  .real-btn {
+    width: 100%;
+  }
+
+  .hbd-line {
+    font-size: 1rem;
+  }
+
+  .nine p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+}
+
+/* Purple-Themed Flower Style Override */
+
+/* Main purple base color */
+:root {
+  --dark-color: #000;
+  --purple-base: #a855f7;
+  --purple-light: #d8b4fe;
+  --purple-gradient: linear-gradient(to top, #9333ea, #a855f7);
+  --purple-glow: rgba(168, 85, 247, 0.5);
+}
+
+.flower__leaf {
+  background-color: var(--purple-base);
+  background-image: var(--purple-gradient);
+  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.4);
+}
+
+.flower__leafs::after {
+  background-color: var(--purple-glow);
+}
+
+.flower__line {
+  background-image: linear-gradient(to top, transparent 10%, var(--purple-base), var(--purple-light));
+}
+
+.flower__line__leaf {
+  background-image: linear-gradient(to top, rgba(168, 85, 247, 0.4), var(--purple-base));
+}
+
+.flower__white-circle {
+  background-color: #fff;
+}
+
+.flower__light {
+  background-color: var(--purple-light);
+}
+
+.flower__light:nth-child(odd) {
+  background-color: var(--purple-base);
+}
+
+.flower__grass--top {
+  border-right: 1.5vmin solid var(--purple-base);
+}
+
+.flower__grass--bottom {
+  background-image: linear-gradient(to top, transparent, var(--purple-light));
+}
+
+.flower__grass__leaf {
+  background-image: linear-gradient(to top, transparent, transparent 30%, var(--purple-base));
+}
+
+.flower__g-long__top {
+  border-right: 0.7vmin solid var(--purple-base);
+}
+
+.flower__g-long__bottom {
+  background-image: linear-gradient(to top, transparent 30%, var(--purple-base));
+}
+
+.flower__g-front__leaf {
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, var(--purple-light) 50%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom right, var(--purple-light) 50%, transparent 50%, transparent);
+  mask-image: linear-gradient(to bottom right, var(--purple-light) 50%, transparent 50%, transparent);
+}
+
+.flower__g-fr__leaf {
+  background-image: linear-gradient(to bottom left, transparent, var(--dark-color) 98%), linear-gradient(to bottom right, var(--purple-base) 45%, transparent 50%, transparent);
+  -webkit-mask-image: linear-gradient(135deg, var(--purple-light) 40%, transparent 50%, transparent);
+}
+
+.long-g .leaf {
+  border-left: 2vmin solid var(--purple-base);
+  background-image: linear-gradient(to top, transparent 20%, var(--dark-color));
+  -webkit-mask-image: linear-gradient(to top, transparent 20%, var(--dark-color));
+}

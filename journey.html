@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Journey</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fff7f0;
+      padding: 30px 20px;
+    }
+    .real-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1aa7ec;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .journey-container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .journey-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .journey-images-audio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+      animation: fadeInImages 2s ease-in-out;
+    }
+
+    .journey-images-audio img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .journey-images-audio img:hover {
+      transform: scale(1.05);
+    }
+
+    .audio-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .jukebox-gif {
+      width: 300px;
+      height: 300px;
+      background-image: url('./img/image5.gif'); /* Ganti dengan GIF pilihan kamu */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 10px;
+    }
+
+    #audio-player {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .journey-poem {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #444;
+      animation: slideInPoem 2s ease-in-out;
+    }
+
+    .journey-poem p {
+      margin: 6px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInImages {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideInPoem {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="journey-container">
+    <h1 class="journey-title">A Journey to Remember</h1>
+
+    <div class="journey-images-audio">
+      <img src="./img/image1.jpg" alt="Your childhood photo">
+
+      <div class="audio-box">
+        <div class="jukebox-gif"></div>
+        <audio id="audio-player" controls autoplay>
+          <source src="https://ik.imagekit.io/1crvfctei/Frank%20Ocean%20-%20Self%20Control.mp3?updatedAt=1742394584495" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <img src="./img/image2.jpg" alt="Your childhood collage">
+    </div>
+
+    <div class="journey-poem">
+      <p>i’ve seen you grow</p>
+      <p>not taller, not older</p>
+      <p>but fuller.</p>
+      <p>like time shaped you gently, even when it wasn’t kind.</p>
+      <p>like you carried the weight and still found ways to bloom.</p>
+
+      <p>i know it hasn’t always been easy.</p>
+      <p>the quiet battles, the lonely nights,</p>
+      <p>the pressure you wore like skin.</p>
+      <p>but you kept moving.</p>
+      <p>you kept choosing softness in a world that begged you to harden.</p>
+      <p>that’s strength, you know</p>
+      <p>real strength.</p>
+
+      <p>and now here you are</p>
+      <p>a whole woman.</p>
+      <p>a graduate, a fighter, a dreamer.</p>
+      <p>you’ve achieved things you once only whispered to yourself late at night.</p>
+      <p>you made it here,</p>
+      <p>and that’s not luck</p>
+      <p>that’s you.</p>
+
+      <p>so no, it’s not surprising when more good things come your way.</p>
+      <p>you’ve earned them.</p>
+      <p>you’ve built the life that’s starting to love you back.</p>
+      <p>and you’re just getting started.</p>
+
+      <p>you’ve come so far.</p>
+      <p>and i hope you see it</p>
+      <p>the beauty in your journey,</p>
+      <p>the strength in your softness,</p>
+      <p>the light you’ve always carried,</p>
+      <p>even when you couldn’t see it.</p>
+
+      <p>i’m proud of you.</p>
+      <p>always.</p>
+
+      <button class="real-btn" onclick="window.location.href='college.html'">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio-player');
+    audio.addEventListener('loadedmetadata', () => {
+      audio.currentTime = 175; // 2 minutes 55 seconds
+    });
+  </script>
+</body>
+
+</html>
