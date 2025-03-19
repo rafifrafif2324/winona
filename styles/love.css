@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background: url(../img/Red\ Beige\ Minimal\ Typographic\ Christian\ Desktop\ Wallpaper\ \(1\).png) no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+  }  
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .poem-box {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .poem {
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #333;
+    text-align: justify;
+    max-width: 90%;
+  }
+  
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  .top-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-top: 1rem; /* naikkan sedikit */
+  }
+  
+  
+  .empty-box {
+    /* Kosongkan atau isi konten lain nanti */
+  }
+  
+  .love-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+  .container {
+    width: 50rem;
+    position: relative;
+    margin-bottom: 4rem; /* naik sedikit */
+  }
+  
+  .svg-container {
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .mo-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+  
+  .lttr {
+    fill: #763C8C;
+  }
+  
